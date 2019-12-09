@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Visibility Change</title>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("visibilitychange", handleVisibilityChange)
+
+      function handleVisibilityChange() {
+        const isVisible = document.visibilityState === "visible"
+        if (isVisible) {
+          console.log('Estoy visible')
+          document.title = 'Gracias por volver'
+        } else {
+          console.log('Estoy invisible')
+          document.title = 'Vuelve por favor'
+        }
+      }
+    </script>
+  </body>
+</html>
